@@ -534,7 +534,7 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Auto-updated via GitHub | Last updated on 07 May 2026
+        Auto-updated via GitHub | Last updated on 10 May 2026
     </div>
     """,
     unsafe_allow_html=True
