@@ -142,7 +142,7 @@ with c10:
     ])
 with c11:
     pg_name = st.selectbox("Payment Gateway", [
-        "PhonePe(Aertrip)", "PhonePe", "RazorPay(Aertrip)", "PayU", "Easebuzz"
+        "PhonePe(Aertrip)", "PhonePe", "RazorPay(Aertrip)", "PayU", "Easebuzz", "Cashfree"
     ])
 
 # ---------------- PG FEES MASTER ----------------
@@ -152,49 +152,56 @@ pg_rates = {
         "PhonePe": ("percent", 1.50),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("percent", 0.0),
-        "Easebuzz": ("percent", 1.65)
+        "Easebuzz": ("percent", 1.65),
+        "Cashfree": ("percent", 1.55)
     },
     "Net Banking(ICICI)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("flat", 22.0),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("flat", 30.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.40)
     },
     "Net Banking(KOTAK)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("flat", 33.0),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("flat", 23.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.40)
     },
     "Net Banking(SBI)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("flat", 22.0),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("flat", 30.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.20)
     },
     "Net Banking(AXIS)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("flat", 22.0),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("flat", 25.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.20)
     },
     "Net Banking(YES)": {
         "PhonePe(Aertrip)": ("percent", 1.00),
         "PhonePe": ("flat", 18.0),
         "RazorPay(Aertrip)": ("percent", 1.55),
         "PayU": ("flat", 23.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.20)
     },
     "Net Banking(OTHER)": {
         "PhonePe(Aertrip)": ("percent", 1.00),
         "PhonePe": ("flat", 18.0),
         "RazorPay(Aertrip)": ("percent", 1.50),
         "PayU": ("flat", 23.29),
-        "Easebuzz": ("flat", 12.50)
+        "Easebuzz": ("flat", 12.50),
+        "Cashfree": ("percent", 1.20)
     },
 
     "Credit Cards(Master)": {
@@ -202,49 +209,56 @@ pg_rates = {
         "PhonePe": ("percent", 1.50),
         "RazorPay(Aertrip)": ("percent", 1.86),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.60)
+        "Easebuzz": ("percent", 1.60),
+        "Cashfree": ("percent", 1.73)
     },
     "Credit Cards(Visa)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("percent", 1.50),
         "RazorPay(Aertrip)": ("percent", 1.86),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.60)
+        "Easebuzz": ("percent", 1.60),
+        "Cashfree": ("percent", 1.73)
     },
     "Credit Cards(Rupay)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
         "PhonePe": ("percent", 1.50),
         "RazorPay(Aertrip)": ("percent", 1.86),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.60)
+        "Easebuzz": ("percent", 1.60),
+        "Cashfree": ("percent", 1.73)
     },
     "Credit Cards(Diners)": {
         "PhonePe(Aertrip)": ("percent", 1.80),
         "PhonePe": ("percent", 1.80),
         "RazorPay(Aertrip)": ("percent", 2.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 2.75)
+        "Easebuzz": ("percent", 2.75),
+        "Cashfree": ("percent", 2.10)
     },
     "Credit Cards(Amex)": {
         "PhonePe(Aertrip)": ("percent", 2.55),
         "PhonePe": ("percent", 2.55),
         "RazorPay(Aertrip)": ("percent", 2.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 2.75)
+        "Easebuzz": ("percent", 2.75),
+        "Cashfree": ("percent", 2.50)
     },
     "Credit Cards(Corporate)": {
         "PhonePe(Aertrip)": ("percent", 2.25),
         "PhonePe": ("percent", 2.25),
         "RazorPay(Aertrip)": ("percent", 2.55),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 2.50)
+        "Easebuzz": ("percent", 2.50),
+        "Cashfree": ("percent", 2.30)
     },
     "Credit Cards(International)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 2.60),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 4.00)
+        "Easebuzz": ("percent", 4.00),
+        "Cashfree": ("percent", 2.70)
     },
 
     "Debit Cards(Master)(<=2000)": {
@@ -252,42 +266,48 @@ pg_rates = {
         "PhonePe": ("percent", 0.35),
         "RazorPay(Aertrip)": ("percent", 0.40),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.50)
+        "Easebuzz": ("percent", 0.50),
+        "Cashfree": ("percent", 0.30)
     },
     "Debit Cards(Visa)(<=2000)": {
         "PhonePe(Aertrip)": ("percent", 0.35),
         "PhonePe": ("percent", 0.35),
         "RazorPay(Aertrip)": ("percent", 0.40),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.50)
+        "Easebuzz": ("percent", 0.50),
+        "Cashfree": ("percent", 0.30)
     },
     "Debit Cards(Master)(>2000)": {
         "PhonePe(Aertrip)": ("percent", 0.78),
         "PhonePe": ("percent", 0.78),
         "RazorPay(Aertrip)": ("percent", 0.80),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.60)
+        "Easebuzz": ("percent", 0.60),
+        "Cashfree": ("percent", 0.75)
     },
     "Debit Cards(Visa)(>2000)": {
         "PhonePe(Aertrip)": ("percent", 0.78),
         "PhonePe": ("percent", 0.78),
         "RazorPay(Aertrip)": ("percent", 0.80),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.60)
+        "Easebuzz": ("percent", 0.60),
+        "Cashfree": ("percent", 0.75)
     },
     "Debit Cards(Corporate)": {
         "PhonePe(Aertrip)": ("percent", 2.25),
         "PhonePe": ("percent", 2.25),
         "RazorPay(Aertrip)": ("percent", 2.55),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 2.20)
+        "Easebuzz": ("percent", 2.20),
+        "Cashfree": ("percent", 2.30)
     },
     "Debit Cards(Rupay)": {
         "PhonePe(Aertrip)": ("percent", 0.0),
         "PhonePe": ("percent", 0.0),
         "RazorPay(Aertrip)": ("percent", 0.10),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.0)
+        "Easebuzz": ("percent", 0.0),
+        "Cashfree": ("percent", 0.10)
     },
     "Debit Cards(Prepaid)": {
         "PhonePe(Aertrip)": ("percent", 1.50),
@@ -301,7 +321,8 @@ pg_rates = {
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 2.60),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 4.00)
+        "Easebuzz": ("percent", 4.00),
+        "Cashfree": ("percent", 2.70)
     },
 
     "UPI": {
@@ -309,7 +330,8 @@ pg_rates = {
         "PhonePe": ("percent", 0.0),
         "RazorPay(Aertrip)": ("percent", 0.50),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 0.0)
+        "Easebuzz": ("percent", 0.0),
+        "Cashfree": ("flat", 1.00)
     },
 
     "EMI": {
@@ -317,14 +339,16 @@ pg_rates = {
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 2.50),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("flat", 0.0)
+        "Easebuzz": ("flat", 0.0),
+        "Cashfree": ("percent", 1.69)
     },
     "Cardless EMI": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 2.50),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("flat", 0.0)
+        "Easebuzz": ("flat", 0.0),
+        "Cashfree": ("percent", 1.69)
     },
 
     "Wallet(PhonePe)": {
@@ -332,70 +356,80 @@ pg_rates = {
         "PhonePe": ("percent", 1.50),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Amazon Pay)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Ola)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Jio)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Mobikwik)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Freecharge)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("flat", 0.0)
+        "Easebuzz": ("flat", 0.0),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Airtel)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Payzapp)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Bajaj)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     },
     "Wallet(Yes Pay)": {
         "PhonePe(Aertrip)": ("flat", 0.0),
         "PhonePe": ("flat", 0.0),
         "RazorPay(Aertrip)": ("percent", 1.70),
         "PayU": ("flat", 0.0),
-        "Easebuzz": ("percent", 1.50)
+        "Easebuzz": ("percent", 1.50),
+        "Cashfree": ("percent", 1.80)
     }
 }
 
@@ -535,7 +569,7 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Auto-updated via GitHub | Last updated on 04 June 2026
+        Auto-updated via GitHub | Last updated on 4 June 2026
     </div>
     """,
     unsafe_allow_html=True
