@@ -58,6 +58,7 @@ supplier_di = {
     "AIR IQ": 0.005,
     "Tripjack Flights": 0.005,
     "Etrav HAP 58Y8": 0.01,
+    "CodeMagen Online Flight - cdmg (Etrav)": 0.01,
     # ZERO DI suppliers
     "Consulate General of Indonesia-Mumbai": 0,
     "RIYA HAP 6A4T": 0,
@@ -403,7 +404,7 @@ def calculate_meta_fee(meta, flight, amount, pax):
     if meta == "None":
         return 0, 0, 0
     if meta == "Sky Scanner Flights":
-        base_fee = 576 if flight == "Domestic" else 576
+        base_fee = 400 if flight == "Domestic" else 400
     elif flight == "Domestic":
         base_fee = 200 if pax <= 2 else 300
     else:
@@ -534,7 +535,7 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Auto-updated via GitHub | Last updated on 10 May 2026
+        Auto-updated via GitHub | Last updated on 04 June 2026
     </div>
     """,
     unsafe_allow_html=True
